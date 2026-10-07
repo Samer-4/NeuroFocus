@@ -1,4 +1,4 @@
-# 🧠 NeuroFocus
+# NeuroFocus
 
 ### Subject-Independent EEG Affective State Classification
 
@@ -10,7 +10,7 @@ The project intentionally prioritizes cross-subject generalization and leakage-r
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 An interactive **Hugging Face Spaces** demo allows users to explore EEG-derived features and model predictions.
 
@@ -30,7 +30,7 @@ Rather than presenting the system as a reliable "emotion detector," the demo act
 
 ---
 
-## 📊 Results at a Glance
+## Results at a Glance
 
 ### Model Selection — Validation Participants
 
@@ -60,13 +60,13 @@ The validation-to-test drop is an important finding of the project: EEG patterns
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Python · NumPy · Pandas · SciPy · scikit-learn · PyTorch · EEG Signal Processing · Welch PSD · Logistic Regression · SVM · Random Forest · EEGNet**
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ~~~text
 NeuroFocus/
@@ -186,7 +186,7 @@ PYTHONPATH=src python -m neurofocus.final_evaluate
 
 ---
 
-# 🔬 The Experiment
+# The Experiment
 
 ## What Are We Trying to Predict?
 
@@ -208,7 +208,7 @@ For this project, a threshold of **5** converts these ratings into binary target
 
 ---
 
-# 📚 Dataset
+# Dataset
 
 The DEAP dataset contains:
 
@@ -226,7 +226,7 @@ NeuroFocus removes this baseline before feature extraction.
 
 ---
 
-# 🧪 Why Participant-Independent Evaluation?
+# Why Participant-Independent Evaluation?
 
 This became one of the most important decisions in the project.
 
@@ -274,7 +274,7 @@ No test participant appears during training or model selection.
 
 ---
 
-# ⚠️ Why Window-Level Splitting Can Be Misleading
+# Why Window-Level Splitting Can Be Misleading
 
 EEG recordings are often divided into smaller windows to create additional training examples.
 
@@ -300,7 +300,7 @@ NeuroFocus avoids this problem by performing the split at the **participant leve
 
 ---
 
-# 🧪 Experiment 1 — Spectral Band Power
+# Experiment 1 — Spectral Band Power
 
 The first approach uses an interpretable EEG representation: **frequency-band power**.
 
@@ -356,7 +356,7 @@ This became our baseline.
 
 ---
 
-# 🧪 Experiment 2 — Differential Entropy
+# Experiment 2 — Differential Entropy
 
 The next question was:
 
@@ -395,7 +395,7 @@ Changing from band power to differential entropy alone was not enough to solve t
 
 ---
 
-# 🧪 Experiment 3 — EEGNet
+# Experiment 3 — EEGNet
 
 That led to another hypothesis:
 
@@ -438,7 +438,7 @@ The neural model did not outperform the simpler spectral baseline.
 
 ---
 
-# 🤔 Why Didn't Deep Learning Win?
+# Why Didn't Deep Learning Win?
 
 Deep learning is powerful when enough data exists to learn robust representations.
 
@@ -463,7 +463,7 @@ In this setting, **more model complexity did not automatically produce better ge
 
 ---
 
-# 🏆 Final Model Selection
+# Final Model Selection
 
 The experiments selected:
 
@@ -511,7 +511,7 @@ The models were retrained and evaluated once on the remaining 200 trials.
 
 ---
 
-# 📉 Why Is Final Accuracy Only Around 52%?
+# Why Is Final Accuracy Only Around 52%?
 
 This deserves more explanation than simply showing the number.
 
@@ -559,7 +559,7 @@ That removes an important source of information that can make EEG classification
 
 ---
 
-# 📈 Why Do Some EEG Papers Report Much Higher Accuracy?
+# Why Do Some EEG Papers Report Much Higher Accuracy?
 
 EEG emotion-recognition papers sometimes report results far above those observed here.
 
@@ -598,7 +598,7 @@ Published EEG reviews identify **inter-subject variability and distribution shif
 
 ---
 
-# 🧠 What About High-Performing Cross-Subject Research?
+# What About High-Performing Cross-Subject Research?
 
 Some research genuinely achieves stronger cross-subject results.
 
@@ -646,7 +646,7 @@ Therefore, headline accuracy values across EEG papers should not be compared wit
 
 ---
 
-# 🔍 Why Balanced Accuracy Matters
+# Why Balanced Accuracy Matters
 
 NeuroFocus uses **balanced accuracy** as its primary evaluation metric.
 
@@ -680,7 +680,7 @@ They demonstrate almost the opposite:
 
 ---
 
-# 🛑 Why We Didn't Keep Tuning After the Test
+# Why We Didn't Keep Tuning After the Test
 
 Once the final test results were observed, we could have done this:
 
@@ -712,7 +712,7 @@ The lower result remains because preserving the integrity of the experiment is m
 
 ---
 
-# 💡 What We Learned
+# What We Learned
 
 The project progressed through a sequence of hypotheses:
 
@@ -755,7 +755,7 @@ That suggests future improvements should target **subject invariance directly**.
 
 ---
 
-# 🔮 What I Would Try Next
+# What I Would Try Next
 
 If the objective shifted from establishing a controlled baseline to maximizing cross-subject performance, the next experiments would focus specifically on reducing differences between participants.
 
@@ -776,7 +776,7 @@ It is learning an EEG representation that transfers between people.
 
 ---
 
-# ⚠️ Limitations
+# Limitations
 
 NeuroFocus is an experimental machine-learning project, **not a clinical emotion-detection system**.
 
@@ -793,7 +793,7 @@ Important limitations include:
 
 ---
 
-# 📖 References
+# References
 
 1. Koelstra, S. et al. (2012). **DEAP: A Database for Emotion Analysis Using Physiological Signals.** *IEEE Transactions on Affective Computing.*
 
@@ -811,7 +811,7 @@ Important limitations include:
 
 ---
 
-# 🎓 Project Background
+# Project Background
 
 NeuroFocus began as a UC San Diego **COGS 189** project exploring machine learning with EEG signals.
 
